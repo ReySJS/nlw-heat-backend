@@ -10,7 +10,7 @@ import { app } from './src/app';
 // ----------------------------------------------------------------------------//
 // --------------------------------server-port---------------------------------//
 app.listen(process.env.PORT, (err: void) => {
-  if (err = null) console.log(err);
+  if (err = undefined) console.log(err);
   console.log(`🚀 Server listening on port ${process.env.PORT}`);
 });
 
