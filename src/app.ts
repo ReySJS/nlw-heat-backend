@@ -5,9 +5,12 @@
 // Author: Allfcourse team
 // -----------------------------------------------------------------------------------------------//
 
-import express from 'express';
-import { routes } from './routes/index';
+import express from 'express'
+import { router } from './routes/routes'
 
-export const app = express();
+const app = express()
+app.use(express.json())
 
-app.use(routes); // => require all routes created on index.routes.js
+app.use(router) // => require all routes created on index.routes.js
+
+export { app }

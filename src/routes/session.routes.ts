@@ -5,17 +5,18 @@
 // Author: Allfcourse team
 // -----------------------------------------------------------------------------------------------//
 
-import express from "express";
+import express from 'express'
+import { AuthenticateUserController } from '../controllers/AuthenticateUserController'
+import session from '../controllers/session.controller'
 
-const router = express.Router();
-import  session  from "../controllers/session.controller";
-// import { signinCallback } from "../controllers/session.controller";
+const routes = express.Router()
 
 // ------------------------------------------------------------//
 // -----------------------session-routes-----------------------//
-router.get("/github", session.github);
-router.get("/signin/callback", session.signinCallback);
+routes.get('/github', session.github)
+routes.get('/signin/callback', session.signinCallback)
+routes.post('/authenticate', new AuthenticateUserController().handle)
 // -----------------------session-routes-----------------------//
 // ------------------------------------------------------------//
 
-export default router;
+export default routes
