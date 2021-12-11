@@ -5,11 +5,11 @@
 // Author: Allfcourse team
 // -----------------------------------------------------------------------------------------------//
 
-import express from 'express'
+import { Router } from 'express'
 import { AuthenticateUserController } from '../controllers/AuthenticateUserController'
 import session from '../controllers/session.controller'
 
-const routes = express.Router()
+const routes = Router()
 
 // ------------------------------------------------------------//
 // -----------------------session-routes-----------------------//

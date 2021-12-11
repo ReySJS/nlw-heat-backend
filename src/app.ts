@@ -8,9 +8,7 @@
 import express from 'express'
 import { router } from './routes/routes'
 
-const app = express()
+export const app = express()
 app.use(express.json())
 
 app.use(router) // => require all routes created on index.routes.js
-
-export { app }
