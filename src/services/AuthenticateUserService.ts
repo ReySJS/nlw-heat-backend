@@ -9,11 +9,11 @@ import { prismaClient } from '../prisma'
  * Retornar o token com as infor do user
  */
 
-interface IAccessTokenResponse {
+type IAccessTokenResponse = {
   access_token: string
 }
 
-interface IUserResponse {
+type IUserResponse = {
   avatar_url: string
   login: string
   id: number
@@ -31,7 +31,7 @@ class AuthenticateUserService {
           client_secret: process.env.GITHUB_CLIENT_SECRET,
           code,
         },
-        headers: {
+        headers: {  
           Accept: 'application/json',
         },
       })
@@ -40,7 +40,7 @@ class AuthenticateUserService {
       'https://api.github.com/user',
       {
         headers: {
-          authorization: `Bearer ${accessTokenResponse.access_token}`,
+          authorization: `Bearer ${accessTokenResponse.access_token}`,  
         },
       },
     )

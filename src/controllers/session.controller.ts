@@ -1,9 +1,3 @@
-// -----------------------------------------------------------------------------------------------//
-// Archive: controllers/session/login.controller.js
-// Description: File responsible for the 'login' function of the 'session' class controller
-// Data: 2021/08/27
-// Author: Allfcourse team
-// -----------------------------------------------------------------------------------------------//
 import { Request, Response } from 'express'
 import 'dotenv/config'
 
